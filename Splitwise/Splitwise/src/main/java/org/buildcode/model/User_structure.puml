@@ -1,0 +1,334 @@
+@startuml
+
+/' diagram meta data start
+config=StructureConfiguration;
+{
+  "projectClassification": {
+    "searchMode": "OpenProject", // OpenProject, AllProjects
+    "includedProjects": "",
+    "pathEndKeywords": "*.impl",
+    "isClientPath": "",
+    "isClientName": "",
+    "isTestPath": "",
+    "isTestName": "",
+    "isMappingPath": "",
+    "isMappingName": "",
+    "isDataAccessPath": "",
+    "isDataAccessName": "",
+    "isDataStructurePath": "",
+    "isDataStructureName": "",
+    "isInterfaceStructuresPath": "",
+    "isInterfaceStructuresName": "",
+    "isEntryPointPath": "",
+    "isEntryPointName": "",
+    "treatFinalFieldsAsMandatory": false
+  },
+  "graphRestriction": {
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "removeByInheritance": "", // inheritance/annotation based filtering is done in a second step
+    "removeByAnnotation": "",
+    "removeByClassPackage": "", // cleanup the graph after inheritance/annotation based filtering is done
+    "removeByClassName": "",
+    "cutMappings": false,
+    "cutEnum": true,
+    "cutTests": true,
+    "cutClient": true,
+    "cutDataAccess": false,
+    "cutInterfaceStructures": false,
+    "cutDataStructures": false,
+    "cutGetterAndSetter": true,
+    "cutConstructors": true
+  },
+  "graphTraversal": {
+    "forwardDepth": 6,
+    "backwardDepth": 6,
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "hideMappings": false,
+    "hideDataStructures": false,
+    "hidePrivateMethods": true,
+    "hideInterfaceCalls": true, // indirection: implementation -> interface (is hidden) -> implementation
+    "onlyShowApplicationEntryPoints": false, // root node is included
+    "useMethodCallsForStructureDiagram": "ForwardOnly" // ForwardOnly, BothDirections, No
+  },
+  "details": {
+    "aggregation": "GroupByClass", // ByClass, GroupByClass, None
+    "showClassGenericTypes": true,
+    "showMethods": true,
+    "showMethodParameterNames": true,
+    "showMethodParameterTypes": true,
+    "showMethodReturnType": true,
+    "showPackageLevels": 2,
+    "showDetailedClassStructure": true
+  },
+  "rootClass": "org.buildcode.model.User",
+  "extensionCallbackMethod": "" // qualified.class.name#methodName - signature: public static String method(String)
+}
+diagram meta data end '/
+
+
+
+digraph g {
+    rankdir="TB"
+    splines=polyline
+    
+
+'nodes 
+subgraph cluster_1400533669 { 
+   	label=buildcode
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   subgraph cluster_1710343382 { 
+   	label=model
+	labeljust=l
+	fillcolor="#d8d8d8"
+	style=filled
+   
+   Account408357324[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Account</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   accountId: String [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   email: String [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   password: String [0..1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ resetPassword()</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+Address408357324[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Address</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   city: String [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   country: String [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   state: String [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   street: String [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   zipCode: String [0..1]</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+Expense408357324[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Expense</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   amount: Double [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   createdAt: String [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   description: String [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   expenseId: String [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   expenseType: ExpenseType [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   shares: Map&lt;User, Double&gt; [0..*]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   splitType: SplitType [0..1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ calculateShares()</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+Group408357324[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Group</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   createdBy: User [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   members: List&lt;User&gt; [0..*]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   name: String [0..1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ addMember(user: User)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ removeMember(user: User)</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+GroupExpense408357324[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)GroupExpense</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   group: Group [0..1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ calculateShares()</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+Payment408357324[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Payment</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   amount: Double [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   receiver: User [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   sender: User [0..1]</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+Person408357324[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Person</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   address: Address [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   firstName: String [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   lastName: String [0..1]</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+User408357324[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)User</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   account: Account [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   dashboard: ExpenseDashboard [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   groups: List&lt;Group&gt; [0..*]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   userId: String [0..1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ createExpense(expense: Expense)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ createGroup(groupName: String): Group</TD></TR>
+<TR><TD ALIGN="LEFT" >+ joinGroup(groupName: String)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ sendGroupInvitation(groupName: String, users: List&lt;User&gt;)</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+} 
+
+subgraph cluster_1723997641 { 
+   	label=utilities
+	labeljust=l
+	fillcolor="#d8d8d8"
+	style=filled
+   
+   ExpenseDashboard1558953005[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)ExpenseDashboard</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   othersOwedToUser: Map&lt;User, Double&gt; [0..*]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   owedToOthers: Map&lt;User, Double&gt; [0..*]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ addExpense(expense: Expense)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ recordPayment(payment: Payment)</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+GroupExpenseFactory1558953005[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)GroupExpenseFactory</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   group: Group [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   splitType: SplitType [0..1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ createExpense(amount: double, participants: Map&lt;User, Double&gt;): Expense</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+} 
+
+subgraph cluster_245375322 { 
+   	label=strategy
+	labeljust=l
+	fillcolor="#d8d8d8"
+	style=filled
+   
+   EqualSplitStrategy137620976[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)EqualSplitStrategy</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ splitExpense(amount: double, participants: List&lt;User&gt;): Map&lt;User, Double&gt;</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+PercentageSplitStrategy137620976[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)PercentageSplitStrategy</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ splitExpense(amount: double, participants: List&lt;User&gt;): Map&lt;User, Double&gt;</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+} 
+} 
+
+'edges    
+Expense408357324 -> GroupExpense408357324[arrowhead=none, arrowtail=empty, dir=both];
+Expense408357324 -> User408357324[label="shares
+[0..*]"];
+ExpenseDashboard1558953005 -> User408357324[label="othersOwedToUser
+[0..*]"];
+ExpenseDashboard1558953005 -> User408357324[label="owedToOthers
+[0..*]"];
+Group408357324 -> User408357324[label="createdBy
+[0..1]"];
+Group408357324 -> User408357324[label="members
+[0..*]"];
+GroupExpense408357324 -> EqualSplitStrategy137620976[arrowhead=none];
+GroupExpense408357324 -> Group408357324[label="group
+[0..1]"];
+GroupExpense408357324 -> PercentageSplitStrategy137620976[arrowhead=none];
+GroupExpenseFactory1558953005 -> Group408357324[label="group
+[0..1]"];
+Payment408357324 -> User408357324[label="receiver
+[0..1]"];
+Payment408357324 -> User408357324[label="sender
+[0..1]"];
+Person408357324 -> Address408357324[label="address
+[0..1]"];
+Person408357324 -> User408357324[arrowhead=none, arrowtail=empty, dir=both];
+User408357324 -> Account408357324[label="account
+[0..1]"];
+User408357324 -> Expense408357324[label="createExpense() -> calculateShares()"];
+User408357324 -> ExpenseDashboard1558953005[label="dashboard
+[0..1]"];
+User408357324 -> Group408357324[label="groups
+[0..*]"];
+    
+}
+@enduml
