@@ -6,6 +6,7 @@ Contains low-level design problems and resources to help you learn and practice.
 
 | Problem Name                | Link                                                                 |
 |-----------------------------|----------------------------------------------------------------------|
+| Document Manager            | [Document Manager](https://github.com/pawanpk87/My-Low-Level-Design/tree/main/DocumentManager)                     |
 | Splitwise                   | [Splitwise](https://github.com/pawanpk87/My-Low-Level-Design/tree/main/Splitwise)                     |
 | Key-Value Store             | [Key Value Store](https://github.com/pawanpk87/My-Low-Level-Design/tree/main/Key%20Value%20Store)   |
 | ATM System                  | [ATM System](https://github.com/pawanpk87/My-Low-Level-Design/tree/main/ATM%20System)               |
