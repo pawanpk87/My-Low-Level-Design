@@ -32,4 +32,4 @@ This system allows users to manage expenses and keep track of debts and payments
 
 ## Class Diagram
 
-![Screenshot 2024-08-26 000115](https://github.com/user-attachments/assets/3b63dfa9-e3f7-4c4b-a84b-c091fca0e3b0)
+![Screenshot 2024-09-05 183347](https://github.com/user-attachments/assets/66dd5d77-abd6-491e-9939-8a45f9dc2e37)
