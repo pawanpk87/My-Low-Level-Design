@@ -10,6 +10,7 @@ Contains low-level design problems and resources to help you learn and practice.
 | Cab Booking Service         | [Cab Booking Service](https://github.com/pawanpk87/My-Low-Level-Design/tree/main/CabBookingService) |
 | Splitwise                   | [Splitwise](https://github.com/pawanpk87/My-Low-Level-Design/tree/main/Splitwise)                   |
 | Key-Value Store             | [Key Value Store](https://github.com/pawanpk87/My-Low-Level-Design/tree/main/Key%20Value%20Store)   |
+| Tic-Tac-Toe                 | [Tic-Tac-Toe](https://github.com/pawanpk87/My-Low-Level-Design/tree/main/TicTacToe)                 |
 | ATM System                  | [ATM System](https://github.com/pawanpk87/My-Low-Level-Design/tree/main/ATM%20System)               |
 | Magical Arena               | [Magical Arena](https://github.com/pawanpk87/My-Low-Level-Design/tree/main/Magical%20Arena)         |
 | Vending Machine             | [Vending Machine](https://github.com/pawanpk87/My-Low-Level-Design/tree/main/Vending%20Machine)     |
