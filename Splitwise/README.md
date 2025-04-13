@@ -27,9 +27,10 @@ This system allows users to manage expenses and keep track of debts and payments
 
 ## Use Case Diagram
 
-![Screenshot 2024-08-26 000054](https://github.com/user-attachments/assets/5780f14f-6d66-4e72-9e35-0cbc0c5f57f4)
+![Screenshot 2025-04-14 at 12 46 23 AM](https://github.com/user-attachments/assets/9784a02f-0f93-4644-8fea-7e72cad96658)
 
 
 ## Class Diagram
 
-![Screenshot 2024-09-05 183347](https://github.com/user-attachments/assets/66dd5d77-abd6-491e-9939-8a45f9dc2e37)
+![Screenshot 2025-04-14 at 12 46 35 AM](https://github.com/user-attachments/assets/8ffb4f37-c3f7-4b3f-8045-972c8f6a72a0)
+
