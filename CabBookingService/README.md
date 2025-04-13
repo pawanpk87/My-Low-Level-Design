@@ -30,5 +30,5 @@
 
 ## Class Diagram
 
-![Screenshot 2024-09-05 214751](https://github.com/user-attachments/assets/68b943dd-73d9-48b4-8725-3c0144a28eaa)
-![Screenshot 2024-09-05 214840](https://github.com/user-attachments/assets/0d39abaa-97a4-49a0-97ef-7d8651b35050)
+![Screenshot 2025-04-14 at 12 40 14 AM](https://github.com/user-attachments/assets/39075fc3-4eef-414c-acbc-80304ec60a10)
+![Screenshot 2025-04-14 at 12 41 06 AM](https://github.com/user-attachments/assets/a6adbfbd-3d78-498a-81c2-3950d0723079)
