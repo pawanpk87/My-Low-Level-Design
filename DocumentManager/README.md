@@ -15,11 +15,12 @@
 
 ## Class Diagram
 
-![Screenshot 2024-08-28 144235](https://github.com/user-attachments/assets/f5fb7749-1dbd-4440-867c-468ac943d35e)
-![Screenshot 2024-08-28 144248](https://github.com/user-attachments/assets/adb8be83-2cd4-4eac-8066-6415d03c5654)
+![Screenshot 2025-04-14 at 12 42 52 AM](https://github.com/user-attachments/assets/9816d4c8-5eef-4cf1-a610-d74edbac0257)
+![Screenshot 2025-04-14 at 12 43 03 AM](https://github.com/user-attachments/assets/f05423f1-81a3-496c-8fdc-922d8826bc5c)
+
 
 ## Sequence Diagram
 
-![Screenshot 2024-08-28 144422](https://github.com/user-attachments/assets/564cb99b-bccd-4095-a959-4209296de35d)
+![Screenshot 2025-04-14 at 12 43 12 AM](https://github.com/user-attachments/assets/3c38513d-eeb2-4789-bd1c-3a218e30b9bd)
 
-![Screenshot 2024-08-28 144455](https://github.com/user-attachments/assets/0b7cdd3e-d5f8-4ccf-814b-6001c6660b41)
+![Screenshot 2025-04-14 at 12 43 19 AM](https://github.com/user-attachments/assets/321590e1-62f8-4b92-ba0b-c2837fa633e8)
